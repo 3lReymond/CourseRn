@@ -1,10 +1,18 @@
+import { useState } from "react";
 import { StyleSheet, Text, TextInput, View } from "react-native";
 
 function TexInputComponent(){
+     const [value, setValue] = useState('')
+     console.log(value);
+     
+
     return (
       <View style={styles.container}>
         <Text style={styles.headerText}>Text Input Component</Text>
-        <TextInput style={styles.input}
+        <TextInput placeholder='Type Something here...'
+         value={value}
+          style={styles.input}
+           onChangeText={setValue}
         
         />
       </View>
