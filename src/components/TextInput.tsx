@@ -3,13 +3,15 @@ import { StyleSheet, Text, TextInput, View } from "react-native";
 
 function TexInputComponent(){
      const [value, setValue] = useState('')
+
      console.log(value);
      
 
     return (
       <View style={styles.container}>
         <Text style={styles.headerText}>Text Input Component</Text>
-        <TextInput placeholder='Type Something here...'
+        <TextInput 
+        placeholder='Type Something here...'
          value={value}
           style={styles.input}
            onChangeText={setValue}
